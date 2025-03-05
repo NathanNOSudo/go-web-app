@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer class="footer"  id="services">
       <p>&copy; 2025 Your Company. All rights reserved.</p>
     </footer>
   </template>
@@ -20,5 +20,6 @@
     position: relative;
     width: 100%;
     bottom: 0;
+    border: red 5px solid;
   }
   </style>

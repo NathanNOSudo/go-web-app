@@ -27,5 +27,6 @@ export default {
 <style scoped>
 .technologies {
   margin-top: 5px;
+  border: red 5px solid;
 }
 </style>
