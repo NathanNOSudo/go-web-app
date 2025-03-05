@@ -26,6 +26,7 @@ import logoSVG from '@/assets/logo.svg';
       <code>webapp/src/components/TechItems.vue</code>
       and <code>server/web/app.go</code>.
       <TechItems />
+      <FootNav></FootNav>
     </div>
   </main>
 </div>
@@ -35,6 +36,7 @@ import logoSVG from '@/assets/logo.svg';
 <script>
 import TitleBar from './components/TitleBar.vue';
 import NavBar from './components/NavBar.vue';
+import FootNav from './components/FootNav.vue';
 
 export default {
   name: 'App',
@@ -58,7 +60,8 @@ export default {
 <style>
 
 body {
-  margin-top: 5%;
+  /* margin-top: 5%; */
+  margin-bottom: 5%;
   padding-right: 5%;
   padding-left: 5%;
   font-size: larger;
