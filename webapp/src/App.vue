@@ -1,10 +1,16 @@
 <script setup>
 import TechItems from './components/TechItems.vue'
+// import TitleBar from './components/TitleBar.vue'
+// import NavBar  from './components/NavBar.vue';
 import logoSVG from '@/assets/logo.svg';
 </script>
 
 <template>
+  <div id="app" :class="{ 'nav-open': isNavBarOpen }">
+    <TitleBar title="Project-1" @toggle-nav-bar="toggleNavBar" />
+    <NavBar :isOpen="isNavBarOpen"/>
   <main id="app">
+
     <h2 class="title">project-1</h2>
     <div class="logo">
       <img :src="logoSVG" height="150" alt="logo" />
@@ -22,9 +28,35 @@ import logoSVG from '@/assets/logo.svg';
       <TechItems />
     </div>
   </main>
+</div>
+
 </template>
 
+<script>
+import TitleBar from './components/TitleBar.vue';
+import NavBar from './components/NavBar.vue';
+
+export default {
+  name: 'App',
+  components: {
+    TitleBar,
+    NavBar
+  },
+  data() {
+    return {
+      isNavBarOpen: false
+    };
+  },
+  methods: {
+    toggleNavBar() {
+      this.isNavBarOpen = !this.isNavBarOpen;
+    }
+  }
+}
+</script>
+
 <style>
+
 body {
   margin-top: 5%;
   padding-right: 5%;
@@ -36,7 +68,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Nav Bar Start */
+#app {
+  transition: margin-left 0.3s;
+}
 
+#app.nav-open {
+  margin-left: 250px;
+}
+/* Nav Bar Stop */
 @media screen and (min-width: 800px) {
   body {
     padding-right: 15%;
