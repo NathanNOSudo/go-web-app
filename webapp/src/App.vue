@@ -1,7 +1,12 @@
 <script setup>
 import TechItems from './components/TechItems.vue'
-// import TitleBar from './components/TitleBar.vue'
-// import NavBar  from './components/NavBar.vue';
+import TitleBar from './components/TitleBar.vue'
+import NavBar from './components/NavBar.vue'
+import FootNav from './components/FootNav.vue'
+import AboutSite from './components/AboutSite.vue'
+import ServicesSection from './components/ServicesSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import AboutMe from './components/AboutMe.vue'
 import logoSVG from '@/assets/logo.svg';
 </script>
 
@@ -9,40 +14,52 @@ import logoSVG from '@/assets/logo.svg';
   <div id="app" :class="{ 'nav-open': isNavBarOpen }">
     <TitleBar title="Project-1" @toggle-nav-bar="toggleNavBar" />
     <NavBar :isOpen="isNavBarOpen"/>
-  <main id="app">
-
-    <h2 class="title">project-1</h2>
-    <div class="logo">
-      <img :src="logoSVG" height="150" alt="logo" />
-    </div>
-    <div>
-      This project is generated with
-      <b>
-        <a href="https://github.com/shpota/goxygen">goxygen</a>
-      </b>.
-      <p />The following list of technologies comes from
-      a REST API call to the Go-based back end. Find
-      and change the corresponding code in
-      <code>webapp/src/components/TechItems.vue</code>
-      and <code>server/web/app.go</code>.
-      <TechItems />
-      <FootNav></FootNav>
-    </div>
-  </main>
-</div>
-
+    <main id="app">
+      <h2 class="title">project-1</h2>
+      <div class="logo">
+        <img :src="logoSVG" height="150" alt="logo" />
+      </div>
+      <div>
+        This project is generated with
+        <b>
+          <a href="https://github.com/shpota/goxygen">goxygen</a>
+        </b>.
+        <p />The following list of technologies comes from
+        a REST API call to the Go-based back end. Find
+        and change the corresponding code in
+        <code>webapp/src/components/TechItems.vue</code>
+        and <code>server/web/app.go</code>.
+        <TechItems />
+        <section id="about">
+          <AboutSite />
+        </section>
+        <section id="about-me">
+          <AboutMe />
+        </section>
+        <section id="services">
+          <ServicesSection />
+        </section>
+        <section id="contact">
+          <ContactSection />
+        </section>
+        <FootNav />
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>
-import TitleBar from './components/TitleBar.vue';
-import NavBar from './components/NavBar.vue';
-import FootNav from './components/FootNav.vue';
-
 export default {
   name: 'App',
   components: {
     TitleBar,
-    NavBar
+    NavBar,
+    TechItems,
+    AboutSite,
+    AboutMe,
+    ServicesSection,
+    ContactSection,
+    FootNav
   },
   data() {
     return {
@@ -58,7 +75,6 @@ export default {
 </script>
 
 <style>
-
 body {
   /* margin-top: 5%; */
   margin-bottom: 5%;

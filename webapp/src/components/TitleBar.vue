@@ -30,6 +30,7 @@
     text-align: center;
     box-shadow: 0 4px 10px -2px rgb(171, 238, 253); /* Adding blue shadow around the bottom */
     position: relative;
+    border: red 5px solid;
   }
   
   .hamburger-button {
