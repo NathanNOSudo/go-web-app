@@ -12,10 +12,10 @@ import logoSVG from '@/assets/logo.svg';
 
 <template>
   <div id="app" :class="{ 'nav-open': isNavBarOpen }">
-    <TitleBar title="Project-1" @toggle-nav-bar="toggleNavBar" />
+    <TitleBar title="My App That I Don't Even now what it is yet" @toggle-nav-bar="toggleNavBar" />
     <NavBar :isOpen="isNavBarOpen"/>
     <main id="app">
-      <h2 class="title">project-1</h2>
+      <h2 class="title">Will take votes to figure out what the app is... </h2>
       <div class="logo">
         <img :src="logoSVG" height="150" alt="logo" />
       </div>
@@ -24,11 +24,9 @@ import logoSVG from '@/assets/logo.svg';
         <b>
           <a href="https://github.com/shpota/goxygen">goxygen</a>
         </b>.
-        <p />The following list of technologies comes from
-        a REST API call to the Go-based back end. Find
-        and change the corresponding code in
-        <code>webapp/src/components/TechItems.vue</code>
-        and <code>server/web/app.go</code>.
+        <p />
+        <!-- <code>webapp/src/components/TechItems.vue</code> -->
+        <!-- and <code>server/web/app.go</code>. -->
         <TechItems />
         <section id="about">
           <AboutSite />
